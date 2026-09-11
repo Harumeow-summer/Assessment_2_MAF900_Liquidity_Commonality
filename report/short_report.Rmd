@@ -1,0 +1,79 @@
+---
+title: "Market Volatility and Cross-Asset ETF Liquidity Commonality"
+author: "Yuyao Zhang"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Load packages used to display saved tables and figures in the report.
+library(readr)
+library(knitr)
+library(here)
+```
+
+# Research Question
+
+How does liquidity co-movement among U.S.-listed ETF proxies for different asset classes differ between high-volatility and low-volatility market conditions?
+
+# Data and Sample
+
+Describe the CRSP ETF data, FRED VIX data, 2010-2025 sample, ETF-day unit of observation, and PERMNO identification.
+
+# Reproducible Workflow
+
+Describe the numbered workflow from data collection to final outputs.
+
+# H1 Preliminary Evidence
+
+```{r h1-table}
+# Read the H1 table created by the analysis script.
+h1_table <- read_csv(
+  here("output", "tables", "table2_h1_high_low_spread.csv"),
+  show_col_types = FALSE
+)
+
+# Display the H1 table in the report.
+kable(h1_table)
+```
+
+```{r h1-figure, out.width="90%"}
+# Display the H1 boxplot created by the figure script.
+knitr::include_graphics(
+  here("output", "figures", "figure1_spread_boxplot.png")
+)
+```
+
+# H2 Preliminary Evidence
+
+```{r h2-table}
+# Read the H2 cross-asset summary created by the analysis script.
+h2_table <- read_csv(
+  here("output", "tables", "table3d_h2_cross_asset_summary.csv"),
+  show_col_types = FALSE
+)
+
+# Display the H2 summary table in the report.
+kable(h2_table)
+```
+
+```{r h2-low, out.width="80%"}
+# Display the Low-VIX correlation heatmap.
+knitr::include_graphics(
+  here("output", "figures", "figure2_low_vix_heatmap.png")
+)
+```
+
+```{r h2-high, out.width="80%"}
+# Display the High-VIX correlation heatmap.
+knitr::include_graphics(
+  here("output", "figures", "figure3_high_vix_heatmap.png")
+)
+```
+
+# Reproducibility Reflection
+
+Discuss licensed CRSP access, scripted cleaning, relative paths, the common-date rule, and transparent reporting.
+
+# AI Disclosure
+
+Describe how ChatGPT and Claude were used and how all important outputs were checked independently.

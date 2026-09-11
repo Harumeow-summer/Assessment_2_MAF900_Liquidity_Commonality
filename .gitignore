@@ -1,0 +1,30 @@
+# RStudio local files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Never upload credentials
+.Renviron
+.env
+
+# Licensed or derived data are rebuilt by code
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Generated outputs are rebuilt by code
+output/tables/*
+!output/tables/.gitkeep
+output/figures/*
+!output/figures/.gitkeep
+
+# Local checking files
+logs/*
+!logs/.gitkeep
+
+# Rendered report files
+report/*.html
+report/*.pdf
+report/*_files/
