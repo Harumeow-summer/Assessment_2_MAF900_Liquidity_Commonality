@@ -99,7 +99,7 @@ Replace the placeholder with your own WRDS username. The password is not stored 
 ## Project structure
 
 ```text
-MAF900_Liquidity_Commonality_Repo_Beginner/
+MAF900_Liquidity_Commonality_Repo/
 ├── MAF900_Liquidity_Commonality.Rproj
 ├── README.md
 ├── .gitignore
