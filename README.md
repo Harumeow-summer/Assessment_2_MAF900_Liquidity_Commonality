@@ -82,8 +82,8 @@ wrds <- dbConnect(
 )
 ```
 Or
-
 # Create a fresh WRDS connection
+```r
 wrds <- DBI::dbConnect(
   RPostgres::Postgres(),
   host = "wrds-pgdata.wharton.upenn.edu",
@@ -93,7 +93,7 @@ wrds <- DBI::dbConnect(
   user = "YOUR_WRDS_USERNAME",
   password = rstudioapi::askForPassword("Enter your WRDS password")
 )
-
+```
 Replace the placeholder with your own WRDS username. The password is not stored in the script.
 
 ## Project structure
@@ -130,7 +130,7 @@ MAF900_Liquidity_Commonality_Repo_Beginner/
 └── logs/
 ```
 
-## the scripts are numbered
+## The scripts are numbered
 
 The numbers show the exact order in which the project should be run.
 This makes the workflow easy to follow and easy to reproduce.
